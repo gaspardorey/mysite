@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	#'django_nvd3',
-	'djangobower',
+	#'djangobower',
 ]
 
 MIDDLEWARE_CLASSES = [
