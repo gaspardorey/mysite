@@ -1234,7 +1234,12 @@ def TripleExponentialSmoothing(Input,N,Alpha,Beta,Gamma,Seasons,test=0):
 
 # Input Data:
 def inputs(request):
-	original=pd.read_csv('C:/Users/gadorey/projects/mysite/polls/media/documents/holt_sales.csv')
+	# THIS ONE WORKS:
+	#original=pd.read_csv('C:/Users/gadorey/projects/mysite/polls/media/documents/holt_sales.csv')
+	
+	# THESE ONES ARE TESTS:
+	original=pd.read_csv('polls/media/documents/holt_sales.csv')
+	
 	disk_engine = create_engine('sqlite:///holt_sales.db')
 	
 	####
