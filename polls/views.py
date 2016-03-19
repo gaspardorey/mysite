@@ -1263,7 +1263,12 @@ def inputs(request):
 	j = 0
 	index_start = 1
 
-	for df in pd.read_csv('C:/Users/gadorey/projects/mysite/polls/media/documents/holt_sales.csv', chunksize=chunksize, iterator=True, encoding='utf-8'):
+	#THIS WORKS:
+	#for df in pd.read_csv('C:/Users/gadorey/projects/mysite/polls/media/documents/holt_sales.csv', chunksize=chunksize, iterator=True, encoding='utf-8'):
+	
+	#This is a test:
+	for df in pd.read_csv('polls/media/documents/holt_sales.csv', chunksize=chunksize, iterator=True, encoding='utf-8'):
+	
 		df = df.rename(columns={c: c.replace(' ', '') for c in df.columns}) # Remove spaces from columns
 		df['Period'] = pd.to_datetime(df['Period']) # Convert to datetimes
 		df.index += index_start
