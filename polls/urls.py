@@ -18,6 +18,7 @@ urlpatterns = [
 
 	#url(r'^predict/$', views.PredictView.as_view(), name='predict'),
 	url(r'^list/$', views.list, name='list'),
+	url(r'^accounts/', include('registration.backends.default.urls')),
 ]
 
 #urlpatterns = patterns('',

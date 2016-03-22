@@ -119,6 +119,7 @@ df = pd.read_sql_query('SELECT Sales, Period, COUNT(*) as `num_sales`'
                        'GROUP BY Sales '
                        'ORDER BY -num_sales', disk_engine)
 
+					   
 #py.iplot([Bar(x=df.Sales, y=df.num_sales)], filename='holt_sales/most common sales by sales')
 #py.iplot([line(x=df.Period, y=df.Sales)], filename='holt_sales/sales per Period')
 py.iplot([Scatter(x=df.Period, y=df.Sales)], mode='lines+markers', name="'Sales'", hoverinfo='name',line=dict(shape='linear'))

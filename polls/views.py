@@ -993,7 +993,22 @@ def list(request):
     else:
         form = DocumentForm() # A empty, unbound form
 
-    # Load documents for the list page
+    #### Testing for list to update if deleted:
+    '''
+    docId = request.POST.get('doc-id', None)
+    if docId is not None:
+        docToDel = Document.objects.get(pk=docId)
+
+        # delete the file using docToDel.docfile
+		docToDel.delete()
+
+		return HttpResponse('Whatever message you want.')
+    '''
+	##############	
+	
+	
+	
+	# Load documents for the list page
     documents = Document.objects.all()
 	
     # Render list page with the documents and the form
